@@ -8,10 +8,16 @@ from app.models.user_model import User
 from app.models.competition_model import Competition
 from app.models.entry_model import Entry
 from alembic import context
+import os
+from dotenv import load_dotenv
+from app.Utils.dburl import SQLALCHEMY_URL
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
+
+section = config.config_ini_section
+config.set_section_option(section, "sqlalchemy.url", SQLALCHEMY_URL)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
