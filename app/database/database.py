@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:kishan@localhost:5432/user_competition"
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:kishan@localhost:5432/users_competition"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL
