@@ -1,6 +1,5 @@
-from pydantic import BaseModel
 from datetime import date
-    
+
 class TempSchema(object):
     created_at : date
     updated_at : date
